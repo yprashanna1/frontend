@@ -25,7 +25,7 @@ function UploadVideo({ onUploadSuccess }) {
     const formData = new FormData()
     formData.append('file', selectedFile)
     try {
-      const response = await fetch('http://127.0.0.1:8000/upload', {
+      const response = await fetch('https://eagleeye-vision.onrender.com/upload', {
         method: 'POST',
         body: formData
       })

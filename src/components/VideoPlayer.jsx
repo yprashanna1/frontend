@@ -7,7 +7,7 @@ function VideoPlayer({ videoFile }) {
 
   useEffect(() => {
     // Connect to the WebSocket endpoint
-    const ws = new WebSocket(`ws://127.0.0.1:8000/ws/annotated?video=${encodeURIComponent(videoFile)}`)
+    const ws = new WebSocket(`wss://eagleeye-vision.onrender.com/ws/annotated?video=${encodeURIComponent(videoFile)}`)
     wsRef.current = ws
 
     ws.onopen = () => {
